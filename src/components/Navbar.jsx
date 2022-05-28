@@ -70,7 +70,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const classes = useStyle({ open });
   return (
-    <AppBar position="relative">
+    <AppBar position="fixed">
       <Toolbar className={classes.toolbar}>
         <Typography variant="h6" className={classes.logoLg}>
           Aprin Dev

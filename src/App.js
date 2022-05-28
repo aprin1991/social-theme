@@ -6,10 +6,14 @@ import Layout from "./components/Layout";
 import { makeStyles } from "@material-ui/styles";
 const useStyle = makeStyles((theme) => ({
   root: {
-    paddingTop: theme.spacing(3),
     marginBottom: theme.spacing(4),
     [theme.breakpoints.up("sm")]: {
       marginBottom: theme.spacing(3),
+    },
+  },
+  rightbar: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
     },
   },
 }));
@@ -19,14 +23,14 @@ function App() {
     <div>
       <Navbar />
       <Grid container className={classes.root}>
-        <Grid item sm={2}>
+        <Grid item sm={2} xs={2}>
           {" "}
           <Leftbar />
         </Grid>
-        <Grid item sm={7}>
+        <Grid item sm={7} xs={10}>
           <Layout />
         </Grid>
-        <Grid item sm={3}>
+        <Grid item sm={3} className={classes.rightbar}>
           <Rightbar />
         </Grid>
       </Grid>
