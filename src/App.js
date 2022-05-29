@@ -4,6 +4,7 @@ import Rightbar from "./components/Rightbar";
 import Navbar from "./components/Navbar";
 import Layout from "./components/Layout";
 import { makeStyles } from "@material-ui/styles";
+import Add from "./components/Add";
 const useStyle = makeStyles((theme) => ({
   root: {
     marginBottom: theme.spacing(4),
@@ -34,7 +35,7 @@ function App() {
           <Rightbar />
         </Grid>
       </Grid>
-      <div></div>
+      <Add />
     </div>
   );
 }

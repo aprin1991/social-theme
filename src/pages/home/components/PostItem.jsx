@@ -12,6 +12,12 @@ const useStyle = makeStyles((theme) => ({
   media: {
     height: "250px",
     width: "100%",
+    [theme.breakpoints.down("sm")]: {
+      height: 150,
+    },
+    [theme.breakpoints.up("xl")]: {
+      height: 350,
+    },
   },
   card: {
     marginBottom: theme.spacing(5),
